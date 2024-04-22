@@ -9,7 +9,7 @@ public class BasicMovement : MonoBehaviour
       public float Speed = 12f;
 
 
-      Vector3 Velocity;
+      public Vector3 Velocity;
       public float Gravity = -19.2f;
       public float JumpHeight = 2f;
       public Transform GroundCheck;
@@ -17,6 +17,7 @@ public class BasicMovement : MonoBehaviour
       public LayerMask GroundMask;
 
       public bool IsGrounded;
+      public bool IsMoving = false;
 
       // Start is called before the first frame update
       void Start()
@@ -27,7 +28,7 @@ public class BasicMovement : MonoBehaviour
       // Update is called once per frame
       void Update()
       {
-            IsGrounded = Physics.CheckSphere(GroundCheck.position, GroudDistance, GroundMask.value);
+            IsGrounded = Physics.CheckSphere(GroundCheck.position, GroudDistance, GroundMask);
 
             if (IsGrounded && Velocity.y < 0)
             {
@@ -42,6 +43,15 @@ public class BasicMovement : MonoBehaviour
             {
                   Velocity.y = Mathf.Sqrt(JumpHeight * -2f * Gravity);
                   
+            }
+
+            if (X == 0 && Z == 0)
+            {
+                  IsMoving = false;
+            }
+            else
+            {
+                  IsMoving = true;
             }
 
             Velocity.y += Gravity * Time.deltaTime;
