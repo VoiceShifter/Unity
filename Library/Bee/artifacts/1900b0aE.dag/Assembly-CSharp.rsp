@@ -353,6 +353,7 @@
 -analyzer:"F:/G.apps/Unity/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"F:/G.apps/Unity/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scenes/Movement/BasicMovement.cs"
+"Assets/Scenes/Movement/CollisionScript.cs"
 "Assets/Scenes/Movement/Event.cs"
 "Assets/Scenes/Movement/PlayerAnimation.cs"
 "Assets/Scenes/Movement/PlayerMouse.cs"
